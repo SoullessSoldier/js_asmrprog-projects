@@ -1,0 +1,136 @@
+@import "../assets/styles/default.css";
+
+body {
+  background-color: #f0f0f0;
+}
+
+.planner {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.calendar-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.add-task-btn {
+  padding: 10px 48px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  background-color: #212121;
+  border: none;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-day {
+  padding: 15px;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #c4c4c4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+  width: 88%;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #212121;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  word-break: break-all;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.add-task-btn:hover,
+.task:hover,
+.modal-content button:hover {
+  background-color: #424242;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  overflow: auto;
+}
+.modal-content {
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 14px;
+}
+.close {
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+}
+input[type="date"],
+input[type="text"] {
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal-content button {
+  margin: 8px 0;
+  padding: 10px 48px;
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1300px) {
+  .calendar-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 996px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .calendar-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

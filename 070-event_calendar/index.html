@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Calendar App | AsmrProg</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="planner">
+      <h1>Event Calendar</h1>
+      <h5>Right-click on task to delete item</h5>
+      <div id="calendar" class="calendar-grid"></div>
+    </div>
+    <button class="add-task-btn" onclick="showAddTaskModal()">Add task</button>
+    <div id="add-task-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeAddTaskModal()">&times;</span>
+        <h2>Add Task</h2>
+        <input type="date" id="task-date" />
+        <input type="text" id="task-desc" placeholder="Task Description" />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+    </div>
+  </body>
+</html>
